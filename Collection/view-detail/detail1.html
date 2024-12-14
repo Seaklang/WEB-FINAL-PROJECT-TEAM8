@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>view Detail</title>
+  <link rel="stylesheet" href="detail.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Righteous&display=swap" rel="stylesheet">   
+  </head>
+</head>
+<body>
+
+  <header class="header">
+    <img class="logo" src="/Home/img/logo.jpg" alt="Logo" />
+    <nav class="navbar">
+      <a href="/Home/home.html">Home</a>
+      <div class="dropdown">
+        <a href="#collection" class="dropdown-btn ">Collection</a>
+        <div class="dropdown-content">
+          <a href="/Collection/product/product.html">All Products</a> <br>
+          <a href="/Collection/account/account.html">My Account</a> <br>
+          <a href="/Collection/card/card.html">Card</a>
+        </div>
+      </div>
+      <a href="/About/about.html">About Us</a>
+      <a href="/Contact/contact.html">Contact</a>
+    </nav>
+    <div class="icons">
+      <i class="fa-brands fa-facebook" id="facebook-btn"></i>
+      <i class="fa-brands fa-instagram" id="instagram-btn"></i>
+      <i class="fa-brands fa-linkedin" id="linkedin-btn"></i>
+      <i class="fa-solid fa-bars" id="menu-btn"></i>
+    </div>
+  </header>
+  <div class="container">
+    <div class="statement">
+      <h1>2024 Mustang® EcoBoost® Fastback</h1>
+      <p>$31,920</p>
+    </div>
+    <div class="slider">
+      <div class="slides">
+          <!-- Slide 1 -->
+          <div class="slide">
+              <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C100A...PYZ..88D.89W.13A.COU.64F.99H.44U.EBST.%5D/EXT/1/vehicle.png" alt="Car 1">
+          </div>
+          <!-- Slide 2 -->
+          <div class="slide">
+              <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C100A...PYZ..88D.89W.13A.COU.64F.99H.44U.EBST.%5D/EXT/2/vehicle.png" alt="Car 2">
+          </div>
+          <!-- Slide 3 -->
+          <div class="slide">
+              <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C100A...PYZ..88D.89W.13A.COU.64F.99H.44U.EBST.%5D/EXT/4/vehicle.png" alt="Car 3">
+          </div>
+          <div class="slide">
+            <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C100A...PYZ..88D.89W.13A.COU.64F.99H.44U.EBST.%5D/EXT/5/vehicle.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C100A...PYZ..88D.89W.13A.COU.64F.99H.44U.EBST.%5D/INT/1/vehicle.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C100A...PYZ..88D.89W.13A.COU.64F.99H.44U.EBST.%5D/INT/2/vehicle.png" alt="">
+          </div>
+        
+      </div>
+      <!-- Navigation Arrows -->
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+  <div class="dots">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+    
+
+  </div>
+  
+
+  <script src="/Collection/view-detail/detail.js"></script>
+</body>
+</html>

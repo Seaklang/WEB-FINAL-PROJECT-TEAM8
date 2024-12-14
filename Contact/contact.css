@@ -1,0 +1,288 @@
+:root {
+  --primary-color: #c9a12a;
+  --background-color: #000;
+  --text-color: #fff;
+  --hover-color: #e59b32;
+  --gray: #d9d9d9;
+  --blue: #0400ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--gray);
+  color: var(--background-color);
+  margin: 0;
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: var(--background-color);
+}
+
+.logo {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.icons i:hover {
+  color: var(--hover-color);
+}
+
+#menu-btn {
+  display: none;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--background-color);
+  padding: 1rem;
+  flex-direction: column;
+}
+.dropdown-content a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.dropdown-content a:hover {
+  color: var(--hover-color);
+}
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/*============================================== Contact section======================================= */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10rem;
+}
+
+.info-section {
+  display: flex;
+  min-width: 300px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+
+.info-section h2 {
+  color: var(--primary-color);
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: 100;
+}
+
+.info-section h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-size: 4em;
+}
+
+.info-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.info-section ul {
+  list-style: none;
+}
+
+.info-section ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.info-desc {
+  max-width: 600px;
+}
+
+.form-section {
+  display: flex;
+  min-width: 300px;
+  background-color: var(--text-color);
+  padding: 3em 1.5em 0;
+  border-radius: 8px;
+  border: 1px solid var(--primary-color);
+}
+
+form {
+  flex: 1;
+  flex-direction: column;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 3em;
+  border-radius: 5px;
+}
+
+form input,
+form textarea {
+  background-color: #fff;
+  font-size: 14px;
+  border: 1px solid var(--primary-color);
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+}
+
+.inputs-a,
+.inputs-b {
+  display: flex;
+  gap: 3em;
+}
+
+form button {
+  border: 1px solid var(--primary-color);
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color:var(--hover-color);
+  color: #fff;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+.contact div i {
+  font-size: 2rem;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+.contact-info > span:first-child {
+  font-weight: 600;
+}
+
+.contact-info-container {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: var(--background-color);
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    padding: 0;
+  }
+  .dropdown-content a {
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .info-section {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .info-section h1 {
+    font-size: 2em;
+  }
+  .info-section h2 {
+    font-size: 1em;
+  }
+  .contact {
+    flex-direction: column;
+  }
+}

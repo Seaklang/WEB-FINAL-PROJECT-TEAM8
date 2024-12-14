@@ -1,0 +1,282 @@
+
+:root {
+  --primary-color: #c9a12a;
+  --background-color: #000;
+  --text-color: #fff;
+  --hover-color: #e59b32;
+  --gray:#d9d9d9;
+  --blue: #0400ff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--background-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  color: var(--hover-color);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.icons i:hover {
+  color: var(--hover-color);
+}
+
+#menu-btn {
+  display: none;
+}
+.dropdown{
+  position: relative;
+}
+.dropdown-content{
+  display: none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background: var(--background-color);
+  padding:1rem;
+  flex-direction: column;
+  /* gap:1.5rem; */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+  
+}
+.dropdown-content a{
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.dropdown-content a:hover {
+  color: var(--hover-color);
+}
+.dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: var(--background-color);
+    width: 200px;
+    flex-direction: column;
+    padding: 1rem;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .dropdown-content {
+    position: relative;
+    box-shadow: none;
+    padding: 0;
+    
+    
+  }
+  .dropdown-content a{
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+    
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+.container1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-content {
+  max-width: 60%;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 80px;
+}
+
+.subtitle {
+  color: #f3ba00;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.text {
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+.car-image {
+  max-width: 35%; 
+
+}
+@media screen and ( max-width: 768px ) {
+  .container1{
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .text-content{
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  h1{
+    font-size: 28px;
+    margin-top: 100px;
+  }
+  .subtitle{
+    font-size: 18px;
+  }
+  .text{
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .car-image{
+    max-width: 75%;
+    margin-bottom: autp;
+  }
+  
+}
+.container2 {
+  max-width: 80%;
+  margin: 0 auto;
+  
+}
+
+.title {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  
+  margin-bottom: 80px;
+}
+
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+
+.box {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #f3ba00;
+}
+
+.box h3 {
+  font-size: 20px;
+  color: #f3ba00;
+  margin-bottom: 10px;
+}
+
+.box p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.footer h3 {
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: 1fr;
+  }
+  .box {
+    text-align: center;
+  }
+}
